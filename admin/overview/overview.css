@@ -1,0 +1,218 @@
+
+
+main .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.over-container {
+    width: 100%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    padding-bottom: 7rem;
+}
+
+.tab-box {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-bottom: 3px solid rgb(199, 191, 191);
+    position: relative;
+    
+}
+
+.tab-box button {
+    font-size: 18px;
+    font-weight: 600;
+    color: gray;
+    background-color: #fff;
+    padding: 18px;
+    margin-right: 15px;
+}
+
+.tab-box .tab-btn.active {
+    color: black;
+}
+
+.content-box {
+    padding: 20px;
+}
+
+.content-box .content {
+    display: none;
+}
+
+.content-box .content h2 {
+    color: rgb(65, 60, 60);
+}
+
+.content-box .content.active {
+    display: block;
+}
+
+.line {
+    position: absolute;
+    top: 54px;
+    left: 0;
+    width: 120px;
+    height: 5px;
+    background-color: black;
+    border-radius: 50px;
+    transition: all 0.4s;
+}
+
+.form {
+    margin-top: 30px;
+}
+
+.form .inputbox {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.input {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.verification-cont {
+    margin-top: 10px;
+}
+
+.check-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-right: 90px;
+}
+
+.check-button {
+    background-color: #d2d2d2;
+    width: 40px;
+    height: 20px;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+}
+
+.check-button::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 11px;
+    height: 11px;
+    border-radius: 200px;
+    margin: 5px;
+    transition: 0.2s;
+}
+
+input:checked + .check-button {
+    background-color: darkgreen;
+}
+
+input:checked + .check-button::before {
+    transform: translateX(20px);
+}
+
+.inputbox label {
+    color: #000;
+    font-size: 1rem;
+}
+
+.form :where(.inputbox input, .select-box ) {
+    position: relative;
+    height: 50px; width: 100%;
+    outline: none;
+    color: #707070;
+    font-size: 1.2rem;
+    border: 1px solid gray;
+    border-radius: 6px;
+    padding: 0 15px;
+    margin-top: 8px;
+}
+
+.form .column {
+    display: flex;
+    column-gap: 10px;
+}
+
+.verification {
+    margin-top: 50px;
+}
+
+.user-text {
+    margin: 15px;
+    position: relative;
+    width: 100%;
+}
+
+.user-text h2 {
+    font-size: 32px;
+}
+
+.user-text p {
+    font-size: 20px;
+    line-height: 1rem;
+}
+
+.user-text button {
+    outline: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.user-details {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.user-details .details {
+    width: 48%;
+    background-color: #d3cfcf;
+    padding: 25px ;
+    border-radius: 7px;
+}
+
+.details p {
+    color: #fff;
+    font-size: 16px;
+}
+
+.details h2 {
+    color: #707070;
+    font-size: 24px;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+    .form .column {
+        flex-wrap: wrap;
+    }
+
+    .form :where(.gender-option, .gender) {
+        row-gap: 15px;
+    }
+}
