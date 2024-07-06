@@ -52,7 +52,7 @@
     padding: 30px;
     border-radius: 30px;
     background-color: transparent;
-    backdrop-filter: blur(190px);
+    backdrop-filter: blur(100px);
     
     opacity: 1.5;
     box-shadow: inset  -3px -3px 11px 0.5px rgb(14, 13, 13);

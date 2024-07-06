@@ -18,9 +18,7 @@ body {
     backdrop-filter: blur(5px);
 }
 
-input {
-    border: 1px solid orange;
-}
+
 
 .container {
     position: relative;
@@ -29,12 +27,17 @@ input {
     background-color: #fff;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 0 15px  rgba(0, 0, 0, 0.1);
+    
+    background-color: transparent;
+    backdrop-filter: blur(200px);
+    
+    opacity: 1.5;
+    box-shadow: inset  -3px -3px 11px 0.5px rgb(14, 13, 13);
 }
 
 .container header {
     font-size: 1.5rem;
-    color: #333;
+    color: #fff;
     text-align: center;
     font-weight: 500;
 }
@@ -49,7 +52,7 @@ input {
 }
 
 .inputbox label {
-    color: #333;
+    color: white;
 }
 
 .form :where(.inputbox input, .select-box ) {
@@ -58,10 +61,13 @@ input {
     outline: none;
     color: #707070;
     font-size: 1rem;
-    border: 1px solid orangered;
     border-radius: 6px;
     padding: 0 15px;
     margin-top: 8px;
+}
+
+.form .inputbox input {
+    box-shadow:inset  5px 5px 9px 1px rgb(161, 161, 161);
 }
 
 .form .column {
@@ -110,15 +116,16 @@ input {
 
 .form button {
     height: 55px;
-    width: 60%;
-    background-color: orangered;
+    width: 100%;
     color: #fff;
-    font-size: 1rem;
-    font-weight: 400;
-    border: none;
-    margin-top: 30px;
-    border-radius: 6px;
+    background-color: crimson;
+    transition: all 0.3s ease;
     cursor: pointer;
+    box-shadow: /* 3px 6px 1px rgb(117, 1, 1),
+                -3px -3px 9px 2px red, */
+                inset  -6px -6px 9px 1px rgb(97, 1, 20);
+    border: none;
+    margin-top: 50px;
     transition: all 0.2s ease;
 }
 
