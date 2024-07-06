@@ -10,7 +10,7 @@
 body {
     font-family: 'Inter', sans-serif;
     color: var(--gray-900);
-    background-color: var(--gray-50);
+    background-color: #000;
 }
 .container {
     max-width: 940px;
@@ -213,6 +213,7 @@ body {
 .payment-method input {
     display: none;
 }
+
 .payment-method-item {
     width: 80px;
     height: 80px;
@@ -250,6 +251,74 @@ input:checked + .payment-method-item::before {
     position: relative;
     margin-bottom: 16px;
 }
+
+.copy-address {
+    position: relative;
+    display: flex;
+    padding: 2px;
+    border: 1px solid orangered;
+    border-radius: 10px;
+}
+
+
+
+.copy-address button {
+    flex: 20%;
+    background-color: orangered;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 20px;
+    height: 50px;
+}
+
+.copy-address button:active {
+    background-color: orange;
+}
+
+.copy-address button::before {
+    content: "copied";
+    position: absolute;
+    top: -30px; right: 0;
+    background-color: red;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    display: none;
+}
+
+.copy-address button::after {
+    content: "";
+    position: absolute;
+    top: -9px; right: 25px;
+    background-color: red;
+    width: 5px; height: 5px;
+    transform: rotate(45deg);
+    display: none;
+}
+
+.copy-address.active button::before,
+.copy-address.active button::after {
+    display: block;
+}
+
+.address-label {
+    padding: 10px;
+    color: grey;
+    font-size: 10px;
+}
+
+.copytext {
+    outline: transparent;
+   border: none;
+    border-radius: 8px;
+    padding: 16px 8px;
+    width: 100%;
+    transition: all .15s ease-in-out;
+}
+
 .payment-form-control {
     outline: transparent;
     border: 1px solid var(--gray-200);
@@ -258,6 +327,11 @@ input:checked + .payment-method-item::before {
     width: 100%;
     transition: all .15s ease-in-out;
 }
+
+.address-label {
+
+}
+
 .payment-form-label {
     position: absolute;
     top: 50%;

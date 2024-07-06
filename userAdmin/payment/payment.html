@@ -30,15 +30,15 @@
                             <div class="payment-plan">
                                 <div class="payment-plan-type">Pro</div>
                                 <div class="payment-plan-info">
-                                    <div class="payment-plan-info-name">Professional Plan</div>
-                                    <div class="payment-plan-info-price">$49 per month</div>
+                                    <div class="payment-plan-info-name">Gold & Silver Plan</div>
+                                    <div class="payment-plan-info-price">$10,000 per month</div>
                                 </div>
                                 <a href="#" class="payment-plan-change">Change</a>
                             </div>
                             <div class="payment-summary">
                                 <div class="payment-summary-item">
-                                    <div class="payment-summary-name">Additional fee</div>
-                                    <div class="payment-summary-price">$10</div>
+                                    <div class="payment-summary-name">min deposit</div>
+                                    <div class="payment-summary-price">$10,000</div>
                                 </div>
                                 <div class="payment-summary-item">
                                     <div class="payment-summary-name">Discount 20%</div>
@@ -59,28 +59,31 @@
                         <div class="payment-method">
                             <input type="radio" name="payment-method" id="method-1" checked>
                             <label for="method-1" class="payment-method-item">
-                                <img src="images/visa.png" alt="">
+                                <img src="images/tether-usdt-logo.png" alt="">
                             </label>
                             <input type="radio" name="payment-method" id="method-2">
                             <label for="method-2" class="payment-method-item">
-                                <img src="images/mastercard.png" alt="">
+                                <img src="images/bnb-bnb-logo.png" alt="">
                             </label>
                             <input type="radio" name="payment-method" id="method-3">
                             <label for="method-3" class="payment-method-item">
-                                <img src="images/paypal.png" alt="">
+                                <img src="images/ethereum-eth-logo.png" alt="">
                             </label>
                             <input type="radio" name="payment-method" id="method-4">
                             <label for="method-4" class="payment-method-item">
-                                <img src="images/stripe.png" alt="">
+                                <img src="images/solana-sol-logo.png" alt="">
                             </label>
                         </div>
                         <div class="payment-form-group">
-                            <input type="email" placeholder=" " class="payment-form-control" id="email">
-                            <label for="email" class="payment-form-label payment-form-label-required">Email Address</label>
+                            <label for="email" class="address-label">USDT Address</label>
+                            <div class="copy-address">
+                                <input type="text" value=" Crypto Address " class="copytext" id="email">
+                                <button><i class="ri-file-copy-line"></i></button>
+                            </div>
                         </div>
                         <div class="payment-form-group">
-                            <input type="text" placeholder=" " class="payment-form-control" id="card-number">
-                            <label for="card-number" class="payment-form-label payment-form-label-required">Card Number</label>
+                            <input type="number" placeholder=" " class="payment-form-control" id="card-number">
+                            <label for="card-number" class="payment-form-label payment-form-label-required">Enter amount</label>
                         </div>
                         <div class="payment-form-group-flex">
                             <div class="payment-form-group">
@@ -89,7 +92,7 @@
                             </div>
                             <div class="payment-form-group">
                                 <input type="text" placeholder=" " class="payment-form-control" id="cvv">
-                                <label for="cvv" class="payment-form-label payment-form-label-required">CVV</label>
+                                <label for="cvv" class="payment-form-label payment-form-label-required">Wallet ID</label>
                             </div>
                         </div>
                         <button type="submit" class="payment-form-submit-button"><i class="ri-wallet-line"></i> Pay</button>
@@ -99,6 +102,14 @@
         </div>
     </section>
     <!-- end: Payment -->
-
+    <script>
+        let copyText = document.querySelector(".copy-address");
+        copyText.querySelector("button").addEventListener("click", function(){
+            let input = copyText.querySelector("input.copytext");
+            input.select();
+            document.execCommand("copy");
+            copyText.classList.add("active");
+        })
+    </script>
 </body>
 </html>
