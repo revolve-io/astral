@@ -3,6 +3,8 @@ const menuBtn = document.querySelector('#menu_bar');
 const closeBtn = document.querySelector('#close_btn');
 
 
+
+
 const themeToggler = document.querySelector('.theme-toggler');
 
 

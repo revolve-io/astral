@@ -18,12 +18,12 @@
 </head>
 <body>
     <section class="container">
-        <header>Registration Form</header>
+        <header>Register</header>
         <form action="#" class="form">
             <div class="column">
                 <div class="inputbox">
                     <label for="">First Name</label>
-                    <input type="text" placeholder="Your first name" required>
+                    <input id="firstName" type="text" placeholder="Your first name" required>
                 </div>
     
                 <div class="inputbox">
@@ -46,6 +46,18 @@
                 <div class="inputbox">
                     <label for="">Birth Date</label>
                     <input type="date" placeholder="Date of birth" required>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="inputbox">
+                    <label for="">Password</label>
+                    <input type="password" placeholder="Input password" required>
+                </div>
+    
+                <div class="inputbox">
+                    <label for="">Confirm password</label>
+                    <input type="password" placeholder="Confirm password" required>
                 </div>
             </div>
 <!--
@@ -115,8 +127,11 @@
             </div>
             -->
 
-            <button>Submit</button>
+            <span class="login"><a href="../login/login.html">Already have an account? Log in!</a></span>
+            <button><a href="../../userAdmin/useradmin.html">Sign Up</a></button>
         </form>
     </section>
+
+    <script src="../../userAdmin/useradmin.js"></script>
 </body>
 </html>
