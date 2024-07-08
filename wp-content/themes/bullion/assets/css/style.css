@@ -57,6 +57,7 @@
  }
 
  /*** 
+ 
 
 ====================================================================
   Global Settings
@@ -65,14 +66,14 @@
  ***/
 
  :root {
-     --theme-color: #fe5924;
+     --theme-color: #24cbfe;
      --theme-color-two: #26ba5e;
      --theme-color-three: #ce183d;
-     --secondary-color: #1b1e31;
+     --secondary-color: #020429;
      --text-color: #6e6e6e;
      --title-color: #1b1e31;
-     --text-font: 'Mulish', sans-serif;
-     --title-font: 'Syne', sans-serif;
+     --text-font: 'Mulish', sans-serif; /** Open sans **/
+     --title-font: 'Roboto', sans-serif;
  }
 
  body {
@@ -198,7 +199,7 @@
  h6 {
      position: relative;
      font-family: var(--title-font);
-     font-weight: 400;
+     font-weight: 700;
      color: var(--title-color);
      margin: 0px;
      transition: all 500ms ease;
@@ -936,6 +937,13 @@
      position: relative;
      padding: 26px 0px;
      margin-right: 80px;
+     width: 200px;
+ }
+
+ .main-header .logo-box figure a img {
+    position: absolute;
+    top: -45px;
+    width: 100%;
  }
 
  .main-header .menu-right-content {
@@ -1021,6 +1029,7 @@
 
  .main-menu {
      float: left;
+     margin-left: 50px;
  }
 
  .main-menu .navbar-collapse {
